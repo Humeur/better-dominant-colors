@@ -1,6 +1,6 @@
 /*
     The functions presented in this file were originally developed by Clayder Gonzalez,
-    Erwin Meza Vega and Hakim Benoudjit, the original code is available here: https://github.com/claydergc/find-peaks
+    Erwin Meza Vega and Hakim Benoudjit, the original source code is available here: https://github.com/claydergc/find-peaks
     and the license associated with this code is available at the root of this project under the name LICENSE_FINDPEAKS.
 
     The same code is taken from the Matlab File Exchange and was written by Nathanael Yoder.
