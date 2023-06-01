@@ -1,24 +1,5 @@
 #include "node.h"
 
-/*
-    Array getDominantColors(String imagePath, Integer dominantCount, Boolean enliven = true);
-
-    Returns an array of strings containing the hexadecimal codes of the dominantCount colors of
-    the image given in the imagePath argument.
-
-    The enliven option allows you to increase the saturation and value of the image's HSV values
-    by 50% to obtain brighter colors. It is enabled by default.
-
-
-    A few different implementations for specific needs :
-
-    Array getDominantColorsRGB(String imagePath, Integer dominantCount, Boolean enliven = true);
-    Returns an array of integers composed of the RGB components of the dominant colors.
-
-    Array getDominantColorsHSV(String imagePath, Integer dominantCount, Boolean enliven = true);
-    Returns an array of integers composed of the HSV components of the dominant colors.
-*/
-
 Napi::Object Init(Napi::Env env, Napi::Object exports) {
     exports.Set(Napi::String::New(env, "getDominantColors"), Napi::Function::New(env, Node::getDominantColors));
     exports.Set(Napi::String::New(env, "getDominantColorsRGB"), Napi::Function::New(env, Node::getDominantColorsRGB));
