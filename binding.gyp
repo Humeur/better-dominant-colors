@@ -1,7 +1,7 @@
 {
   "targets": [
     {
-      "target_name": "dominant_color",
+      "target_name": "dominanthue",
       "cflags!": [ "-fno-exceptions -std=c++17" ],
       "cflags_cc!": [ "-fno-exceptions" ],
       'defines': [

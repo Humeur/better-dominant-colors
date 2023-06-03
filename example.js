@@ -1,4 +1,4 @@
-var DominantColor = require('bindings')('dominant_color.node')
+var DominantColor = require('bindings')('dominanthue.node')
 
 /*
     Array getDominantColors(String imagePath, Integer dominantCount, Boolean enliven = true);

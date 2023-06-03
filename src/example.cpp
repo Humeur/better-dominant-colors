@@ -1,6 +1,10 @@
 #include "DominantColor.h"
 
-//example using c++ functions...
+/*
+    If you wish to use the C++ library directly, here are the same examples as in the example.js
+    file at the root of the project, but written in C++.
+*/
+
 int main() {
     std::vector<DominantColor::RGB> dominantColor = DominantColor::get<DominantColor::RGB>("../images/big.jpg", 3, false);
 
