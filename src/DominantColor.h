@@ -49,6 +49,8 @@ namespace DominantColor {
     void getNewSizeFromMaxSize(int *originalWidth, int *originalHeight);
     std::unique_ptr<unsigned char[]> resizeImage(std::unique_ptr<unsigned char[]> imageSrc, int *width, int *height);
     std::array<DominantColor::pixel, 360> getPixelsOccurencesFromImagePath(std::string imagePath);
+    bool isXDistantFromNToPairArray(int x, int n, const std::vector<std::pair<pixel, int>> &array);
+    std::vector<std::pair<pixel, int>> getDistantPeaks(const std::vector<std::pair<pixel, int>> &peaks, int dominantCount);
     std::vector<std::pair<pixel, int>> getPeaks(std::array<pixel, 360> pixelOccurences, int dominantCount);
     void enlivenPeaksColors(std::vector<std::pair<pixel, int>> &peaks);
 

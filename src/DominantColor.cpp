@@ -147,6 +147,35 @@ void enlivenPeaksColors(std::vector<std::pair<pixel, int>> &peaks) {
     }
 }
 
+bool isXDistantFromNToPairArray(int x, int n, const std::vector<std::pair<pixel, int>> &array) {
+    for (const auto &e : array) {
+        int value = e.second;
+        if (std::abs(x - value) < n) return false;
+    }
+    return true;
+}
+
+std::vector<std::pair<pixel, int>> getDistantPeaks(const std::vector<std::pair<pixel, int>> &peaks, int dominantCount) {
+    int n = 40;
+    std::vector<std::pair<pixel, int>> peaksTmp(peaks);
+    std::vector<std::pair<pixel, int>> distantPeaks;
+
+    while (distantPeaks.size() < dominantCount) {
+        if (peaksTmp.empty()) {
+            std::copy(peaks.begin(), peaks.end(), std::back_inserter(peaksTmp));
+            n -= 1;
+        }
+
+        if (isXDistantFromNToPairArray(peaksTmp[0].second, n, distantPeaks)) {
+            distantPeaks.emplace_back(peaksTmp[0]);
+        }
+
+        peaksTmp.erase(peaksTmp.begin());
+    }
+
+    return distantPeaks;
+}
+
 std::vector<std::pair<pixel, int>> getPeaks(std::array<pixel, 360> pixelOccurences, int dominantCount) {
     std::vector<float> x;
     std::vector<int> peaks;
@@ -157,7 +186,6 @@ std::vector<std::pair<pixel, int>> getPeaks(std::array<pixel, 360> pixelOccurenc
 
     PeakFinder::findPeaks(x, peaks, false, 100.0);
 
-
     std::vector<std::pair<pixel, int>> peaksToPixel(peaks.size());
     std::transform(peaks.cbegin(), peaks.cend(), peaksToPixel.begin(), [&pixelOccurences](int index) {
         return std::pair<pixel, int>{pixelOccurences[index], index};
@@ -166,6 +194,7 @@ std::vector<std::pair<pixel, int>> getPeaks(std::array<pixel, 360> pixelOccurenc
     std::sort(peaksToPixel.begin(), peaksToPixel.end(), [](const std::pair<pixel, int> &a, const std::pair<pixel, int> &b) {
         return a.first.count > b.first.count;
     });
+    peaksToPixel = getDistantPeaks(peaksToPixel, dominantCount);
 
     return {peaksToPixel.begin(), peaksToPixel.begin() + dominantCount};
 }
