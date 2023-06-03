@@ -1,4 +1,4 @@
-var DominantColor = require('bindings')('dominanthue.node')
+var dominantColorsSmart = require('bindings')('dominant_colors_smart.node')
 
 /*
     Array getDominantColors(String imagePath, Integer dominantCount, Boolean enliven = true);
@@ -10,8 +10,8 @@ var DominantColor = require('bindings')('dominanthue.node')
     by 50% to obtain brighter colors. It is enabled by default.
 */
 
-dominantColorsSmall = DominantColor.getDominantColors("images/small.png", 3)
-dominantColorsMedium = DominantColor.getDominantColors("images/medium.jpg", 3, false)
+dominantColorsSmall = dominantColorsSmart.getDominantColors("images/small.png", 3)
+dominantColorsMedium = dominantColorsSmart.getDominantColors("images/medium.jpg", 3, false)
 
 /*
     A few different implementations for specific needs :
@@ -20,14 +20,14 @@ dominantColorsMedium = DominantColor.getDominantColors("images/medium.jpg", 3, f
     Returns an array of integers composed of the RGB components of the dominant colors.
 */
 
-dominantColorsBigRGB = DominantColor.getDominantColorsRGB("images/big.jpg", 4, false)
+dominantColorsBigRGB = dominantColorsSmart.getDominantColorsRGB("images/big.jpg", 4, false)
 
 /*
     - Array getDominantColorsHSV(String imagePath, Integer dominantCount, Boolean enliven = true);
     Returns an array of integers composed of the HSV components of the dominant colors.
 */
 
-dominantColorsBigHSV = DominantColor.getDominantColorsHSV("images/big.jpg", 4, false)
+dominantColorsBigHSV = dominantColorsSmart.getDominantColorsHSV("images/big.jpg", 4, false)
 
 
 console.log(dominantColorsSmall, dominantColorsMedium, dominantColorsBigRGB, dominantColorsBigHSV)
