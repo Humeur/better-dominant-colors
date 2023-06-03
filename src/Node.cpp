@@ -1,3 +1,7 @@
+/*
+    Made by Livio Dal Maso (@Humeur) http://humeur.me/
+*/
+
 #include "node.h"
 
 Napi::Object Init(Napi::Env env, Napi::Object exports) {
