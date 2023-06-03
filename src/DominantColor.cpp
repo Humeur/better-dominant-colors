@@ -1,3 +1,7 @@
+/*
+    Made by Livio Dal Maso (@Humeur) http://humeur.me/
+*/
+
 #include "DominantColor.h"
 
 #define STB_IMAGE_IMPLEMENTATION

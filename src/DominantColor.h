@@ -1,3 +1,7 @@
+/*
+    Made by Livio Dal Maso (@Humeur) http://humeur.me/
+*/
+
 #pragma once
 
 #include <iostream>
