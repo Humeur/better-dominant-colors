@@ -6,7 +6,7 @@
 
 #include <fstream>
 
-#include "../node_modules/node-addon-api/napi.h"
+#include "napi.h"
 
 #include "DominantColor.h"
 

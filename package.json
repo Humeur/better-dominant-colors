@@ -2,7 +2,7 @@
   "name": "better-dominant-colors",
   "version": "1.0.0",
   "description": "A fast library written in C++ to obtain the dominant colors of an image in a meaningful way to get usable results.",
-  "main": "build/Release/better_dominant_colors.node",
+  "main": "jslib/binding.js",
   "directories": {
     "lib": "lib"
   },
@@ -18,7 +18,7 @@
     "url": "https://github.com/Humeur/better-dominant-colors/issues",
     "email": "livio@humeur.me"
   },
-  "license": "GNU GENERAL PUBLIC",
+  "license": "GNU",
   "person": {
     "name": "Livio Dal Maso @Humeur",
     "email": "livio@humeur.me",
@@ -26,6 +26,17 @@
   },
   "dependencies": {
     "bindings": "~1.2.1",
-    "node-addon-api": "*"
-  }
+    "node-addon-api": "~6.1.0"
+  },
+  "keywords": [
+    "color",
+    "dominant",
+    "colors",
+    "c",
+    "c++",
+    "dominantcolor",
+    "dominantcolors",
+    "image",
+    "images"
+  ]
 }
