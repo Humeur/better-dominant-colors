@@ -1,6 +1,6 @@
 # `better-dominant-colors`
 
-**A fast NodeJS library written in C++ to obtain the dominant colors of an image in a meaningful way to get usable results.**
+**A fast NPM library written in C++ to obtain the dominant colors of an image in a meaningful way to get usable results.**
 
 To process images, I used the fantastic [stb_image library](https://github.com/nothings/stb).\
 To find peaks in my diagrams, I adapted [the code](https://github.com/claydergc/find-peaks) from Clayder Gonzalez, which is also an adaptation of the [original code](https://fr.mathworks.com/matlabcentral/fileexchange/25500-peakfinder-x0-sel-thresh-extrema-includeendpoints-interpolate) from Matlab.\
