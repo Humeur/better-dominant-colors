@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.24)
-project(dominant_colors_smart)
+project(better_dominant_colors)
 
 set(CMAKE_CXX_STANDARD 17)
 

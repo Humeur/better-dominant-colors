@@ -95,7 +95,7 @@ And compile :
 cmake --build .
 ```
 
-The binary is in the folder : *build/Debug/dominant_colors_smart.exe* and the main function in *src/example.cpp*.
+The binary is in the folder : *build/Debug/better_dominant_colors.exe* and the main function in *src/example.cpp*.
 
 ### Compile the Node library <a name="node"></a>
 
