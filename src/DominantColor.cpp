@@ -163,7 +163,7 @@ std::vector<std::pair<pixel, int>> getDistantPeaks(const std::vector<std::pair<p
     while (distantPeaks.size() < dominantCount) {
         if (peaksTmp.empty()) {
             std::copy(peaks.begin(), peaks.end(), std::back_inserter(peaksTmp));
-            n -= 1;
+            n = static_cast<int>(n / 1.5);
         }
 
         if (isXDistantFromNToPairArray(peaksTmp[0].second, n, distantPeaks)) {
