@@ -1,4 +1,4 @@
-# `dominant-colors-smart`
+# `better-dominant-colors`
 
 **A fast NodeJS library written in C++ to obtain the dominant colors of an image in a meaningful way to get usable results.**
 
@@ -18,10 +18,10 @@ I'll explain how I do it later in this readme, but it's not rocket science.
 
 ### Installation <a name="install"></a>
 
-You can install `dominant-colors-smart` using `npm`:
+You can install `better-dominant-colors` using `npm`:
 
 ``` bash
-npm install -g dominant-colors-smart
+npm install -g better-dominant-colors
 ```
 
 ### Usage <a name="usage"></a>
@@ -29,7 +29,7 @@ npm install -g dominant-colors-smart
 I recommend you to take a look at the example.js file at the root of this project for more examples and to better understand the use of certain parameters, even if the library is really simple to use.
 
 ``` JS
-var dominantColorsSmart = require('dominant-colors-smart');
+var betterDominantColors = require('better-dominant-colors');
 
 /*
     Array getDominantColors(String imagePath, Integer dominantCount, Boolean enliven = true);
@@ -41,7 +41,7 @@ var dominantColorsSmart = require('dominant-colors-smart');
     by 50% to obtain brighter colors. It is enabled by default.
 */
 
-dominantColorsSmall = dominantColorsSmart.getDominantColors("images/small.png", 3)
+dominantColorsSmall = betterDominantColors.getDominantColors("images/small.png", 3)
 
 console.log(dominantColorsSmall)
 /* Ouput : ['#ff04', '#3c719c', '#950eef'] */
