@@ -21,7 +21,7 @@ I'll explain how I do it later in this readme, but it's not rocket science.
 You can install `better-dominant-colors` using `npm`:
 
 ``` bash
-npm install -g better-dominant-colors
+npm install better-dominant-colors
 ```
 
 ### Usage <a name="usage"></a>
